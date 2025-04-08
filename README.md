@@ -8,6 +8,7 @@ https://youtu.be/RKYKr3BABhc
 https://www.bilibili.com/video/BV1YMfuYvEUQ/                    
 【大模型应用开发-入门系列】02 AGI知识体系介绍-开发前认知扫盲          
 https://youtu.be/NQE2dwH9WvE                   
+https://www.bilibili.com/video/BV1t5dnYJE28/                
 对应文件夹:01_BasicIntro/01_AGI知识体系介绍        
 
 大纲_V1.0内容                                   
