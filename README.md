@@ -12,6 +12,7 @@ https://www.bilibili.com/video/BV1t5dnYJE28/
 对应文件夹:01_BasicIntro/01_AGI知识体系介绍        
 【大模型应用开发-入门系列】03 集成开发环境搭建-开发前准备工作            
 https://youtu.be/KyfGduq5d7w           
+https://www.bilibili.com/video/BV1nvdpYCE33/             
 
 
 大纲_V1.0内容                                   
