@@ -5,16 +5,21 @@
 相关视频合集整理:              
 【大模型应用开发-入门系列】01 一次梳理大模型入门学习路径                 
 https://youtu.be/RKYKr3BABhc                 
-https://www.bilibili.com/video/BV1YMfuYvEUQ/                    
+https://www.bilibili.com/video/BV1YMfuYvEUQ/                     
+
 【大模型应用开发-入门系列】02 AGI知识体系介绍-开发前认知扫盲          
 https://youtu.be/NQE2dwH9WvE                   
 https://www.bilibili.com/video/BV1t5dnYJE28/                
 对应文件夹:01_BasicIntro/01_AGI知识体系介绍        
+
 【大模型应用开发-入门系列】03 集成开发环境搭建-开发前准备工作            
 https://youtu.be/KyfGduq5d7w           
 https://www.bilibili.com/video/BV1nvdpYCE33/              
-对应文件夹:01_BasicIntro/02_集成开发环境搭建                      
+对应文件夹:01_BasicIntro/02_集成开发环境搭建                     
 
+【大模型应用开发-入门系列】04 大模型LLM接口服务调用方案             
+https://youtu.be/mTrgVllUl7Y                
+对应文件夹:01_BasicIntro/03_集成开发环境搭建
 
 大纲_V1.0内容                                   
 <img src="./other/02.png" alt="这是一张图片" width="900" />              
