@@ -19,6 +19,7 @@ https://www.bilibili.com/video/BV1nvdpYCE33/
 
 【大模型应用开发-入门系列】04 大模型LLM接口服务调用方案              
 https://youtu.be/mTrgVllUl7Y                 
+https://www.bilibili.com/video/BV1BvduYKE75/                   
 对应文件夹:01_BasicIntro/03_LLM服务调用方案                  
 
 大纲_V1.0内容                                   
