@@ -22,6 +22,10 @@ https://youtu.be/mTrgVllUl7Y
 https://www.bilibili.com/video/BV1BvduYKE75/                   
 对应文件夹:01_BasicIntro/03_LLM服务调用方案                  
 
+【大模型应用开发-入门系列】05 Prompt工程 智能客服推荐应用案例全流程实操 源码讲解 LangChain+FastAPI,将应用封装成API接口服务                   
+https://youtu.be/uPVwltdeTbk                  
+对应文件夹:02_PromptEngineering/01_BasicDemoWithLangChain                    
+
 大纲_V1.0内容                                   
 <img src="./other/02.png" alt="这是一张图片" width="900" />              
 
