@@ -25,7 +25,11 @@ https://www.bilibili.com/video/BV1BvduYKE75/
 【大模型应用开发-入门系列】05 Prompt工程 智能客服推荐应用案例全流程实操 源码讲解 LangChain+FastAPI,将应用封装成API接口服务                   
 https://youtu.be/uPVwltdeTbk                  
 https://www.bilibili.com/video/BV1L2doYPEAX/               
-对应文件夹:02_PromptEngineering/01_BasicDemoWithLangChain                    
+对应文件夹:02_PromptEngineering/01_BasicDemoWithLangChain                
+
+【大模型应用开发-入门系列】06 Prompt工程 流量包推荐智能客服的对话质量检查全流程实操 源码讲解 思维链 CoT 自洽性 SelfConsistency          
+https://youtu.be/i6BjUP29xxY          
+对应文件夹:02_PromptEngineering/02_BasicDemoWithLangChain             
 
 大纲_V1.0内容                                   
 <img src="./other/02.png" alt="这是一张图片" width="900" />              
