@@ -34,6 +34,7 @@ https://www.bilibili.com/video/BV1HZouY5EPs/
 
 【大模型应用开发-入门系列】07 Prompt工程 26条有效的提示词技巧               
 https://youtu.be/QEdhIQpo8HI               
+https://www.bilibili.com/video/BV11P5BzNEq3/              
 对应文件夹:02_PromptEngineering/03_26条有效的提示词技巧                  
 
 大纲_V1.0内容                                   
