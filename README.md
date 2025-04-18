@@ -32,6 +32,10 @@ https://youtu.be/i6BjUP29xxY
 https://www.bilibili.com/video/BV1HZouY5EPs/                
 对应文件夹:02_PromptEngineering/02_BasicDemoWithLangChain              
 
+【大模型应用开发-入门系列】07 Prompt工程 26条有效的提示词技巧               
+https://youtu.be/QEdhIQpo8HI               
+对应文件夹:02_PromptEngineering/03_26条有效的提示词技巧                  
+
 大纲_V1.0内容                                   
 <img src="./other/02.png" alt="这是一张图片" width="900" />              
 
