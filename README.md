@@ -37,6 +37,11 @@ https://youtu.be/QEdhIQpo8HI
 https://www.bilibili.com/video/BV11P5BzNEq3/              
 对应文件夹:02_PromptEngineering/03_26条有效的提示词技巧                  
 
+【大模型应用开发-入门系列】08 RAG检索增强生成 健康档案私有知识库搭建和检索全流程实操 源码讲解 LangChain+FastAPI,将应用封装成API               
+https://youtu.be/hTsiWAFEU2Q                   
+https://www.bilibili.com/video/BV1nkLPzNEbP/                     
+对应文件夹:03_RAG/01_RagDemoWithLangChain                
+
 大纲_V1.0内容                                   
 <img src="./other/02.png" alt="这是一张图片" width="900" />              
 
