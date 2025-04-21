@@ -45,7 +45,7 @@ https://www.bilibili.com/video/BV1nkLPzNEbP/
 【大模型应用开发-入门系列】09 KAG知识增强生成 最新V0.7版本 产品模式下应用开发案例全流程实操             
 https://youtu.be/ZN3BRjsPmic           
 https://www.bilibili.com/video/BV1ba51zFEpe/           
-对应文件夹:03_KAG                    
+对应文件夹:03_KAG/01_WebAppTest                              
 
 大纲_V1.0内容                                   
 <img src="./other/02.png" alt="这是一张图片" width="900" />              
