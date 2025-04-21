@@ -3,7 +3,7 @@
 **(1)KAG是什么**               
 检索增强生成（RAG）技术推动了领域应用与大模型结合。然而，RAG 存在着向量相似度与知识推理相关性差距大、对知识逻辑（如数值、时间关系、专家规则等）不敏感等问题，这些缺陷阻碍了专业知识服务的落地             
 2024年10月24日，OpenSPG 发布 v0.5 版本，正式发布了知识增强生成（KAG）的专业领域知识服务框架                 
-官方网址:https://openspg.yuque.com/r/organizations/homepage                                                                                                                                    
+官方网址:https://openspg.yuque.com/r/organizations/homepage                     
 Github地址:https://github.com/OpenSPG/KAG                                   
 **(2)KAGV0.7版本更新**                     
 https://github.com/OpenSPG/KAG/releases/tag/v0.7                             
@@ -106,89 +106,6 @@ embedding_model = "text-embedding-v1"
 (5)知识探查       
 按照知识类型、知识名称进行探查，支持列表和画布两种方式          
 (6)推理问答          
-支持普通问答和深度推理                  
-
-
-
-
-
-### (4) HTTP API接口测试
-使用Apifox工具进行接口验证测试，并将提供的接口文档KagTest.apifox.json导入到Apifox            
-## 4.3 开发者模式测试             
-私域知识库场景，图谱构建和推理问答的效果，与schema设计、知识抽取prompt、表示模型的选取、问题规划prompt、图谱召回算法、答案生成prompt 等密切相关。这些定制化暂未透出到产品侧，用户需要借助kag开发者模式实现自定义。         
-### (1) 安装依赖
-下载KAG源码 https://github.com/OpenSPG/KAG 解压后将源码工程拷贝到项目根目录，截止2025-01-10,最新版本是v0.6.0                          
-新建命令行终端，按照如下指令进行依赖安装               
-cd KAG                          
-pip install -e .                    
-安装完成之后可以运行如下指令验证是否安装成功                               
-knext --version                        
-### (2)调整配置文件                                                          
-将根目录下的other/config目录下的example_config.yaml文件拷贝一份到根目录,根据自己的业务修改配置参数             
-KAG支持txt、pdf、markdown、docx、json、csv、语雀等，根据自己要处理的文本类型进行相关设置                 
-### (3)使用配置文件初始化项目                                   
-新建命令行终端，运行如下命令进行项目创建和初始化                                     
-knext project create --config_path ./example_config.yaml             
-若项目创建完成，修改了配置文件，需要运行如下命令进行更新                  
-knext project update --proj_path .                  
-### (3)提交schema
-项目初始化完成后，进入到对应的项目文件夹下，根据实际业务需求调整schema，调整完成后再执行提交schema                
-knext schema commit                     
-### (4)构建索引                                   
-首先将文档拷贝到新建项目文件夹中的builder/data下，支持txt、pdf、markdown、docx、json、csv等                         
-并可以根据自身业务需求，在builder/prompt目录下新增:ner.py、std.py、triple.py                
-**注意:** 代码中是通过注解的方式配置到配置文件中                     
-打开命令行终端，进入脚本所在目录cd builder，运行 python indexer.py 命令
-构建脚本启动后，会在当前工作目录下生成任务的 checkpoint 目录，记录了构建链路的 checkpoint 和统计信息           
-KAG 框架基于 checkpoint 文件提供了断点续跑的功能。如果由于程序出错或其他外部原因（如 LLM 余额不足）导致任务中断，可以重新执行 indexer.py，KAG 会自动加载 checkpoint 文件并复用已有结果                         
-索引构建成功后，可登录到 http://127.0.0.1:8887/或 http://127.0.0.1:7474/browser/ 查看知识图谱                
-### (5)检索                             
-打开命令行终端，进入脚本所在目录solver，运行 python query.py 命令                            
-根据自身业务需求，可设置相关prompt内容:如resp_generator.py                         
-也可以在产品端进行测试 http://127.0.0.1:8887/                  
-
-
-# 4、项目测试
-## 4.1 案例：健康档案私有知识库搭建和检索
-### （1）使用脚本测试大模型调用服务
-进入01_RagDemoWithLangChain文件夹下，在使用python llmsTest.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数                     
-utils/llms.py中关于大模型配置参数的调整，以及utils.config.py脚本中的服务IP、PORT、LLM_TYPE等设置               
-### （2）文本预处理后进行灌库 
-这里以pdf文件为例，在input文件夹下准备了两份pdf文件。健康档案.pdf:测试中文pdf文档处理，DeepSeek_R1.pdf:测试英文pdf文档处理                
-在utils文件夹下提供了pdfSplitTest_Ch.py脚本工具用来处理中文文档、pdfSplitTest_En.py脚本工具用来处理英文文档                 
-vectorSaveTest.py脚本执行调用tools中的工具进行文档预处理后进行向量计算及灌库                  
-进入01_RagDemoWithLangChain文件夹下，在运行python vectorSaveTest.py命令启动脚本前，需根据自己的实际情况调整utils/config.py代码中的如下参数：               
-选择使用哪种模型标志设置，LLM_TYPE = "openai"                       
-设置待处理的文件内容文类型，中文或英文，TEXT_LANGUAGE = 'Chinese'                  
-文件所在路径，INPUT_PDF = "input/健康档案.pdf"                     
-指定文件中待处理的页码，全部页码则填None PAGE_NUMBERS = None                                      
-chromaDB向量数据库的持久化存储文件夹路径CHROMADB_DIRECTORY = "chromaDB"                
-待查询的chromaDB向量数据库的集合名称CHROMADB_COLLECTION_NAME = "demo001"                  
-### （3-1）启动API接口服务 
-进入01_RagDemoWithLangChain文件夹下，在使用python main.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数                                                    
-utils/llms.py中关于大模型配置参数的调整，以及utils.config.py脚本中的服务IP、PORT、LLM_TYPE等设置                  
-### （3-2）启动API接口服务(re-ranker)        
-re-ranker是一种用于信息检索系统的技术，旨在对初步检索到的结果进行进一步排序，以提高相关性和准确性                    
-通常在一个信息检索任务中，系统会首先根据查询条件从大量文档或数据中初步筛选出一组候选结果                  
-然后通过一个re-ranker模型对这些候选结果进行细致的分析和重新排序，以确保最相关的结果排在最前面                    
-首先通过该地址下载other文件夹，下载完成后将other压缩文件解压后拷贝到项目工程01_RagDemoWithLangChain下即可                                      
-链接: https://pan.baidu.com/s/12oUh-vOVgSqH1fcmhy33wA?pwd=1234 提取码: 1234        
-进入01_RagDemoWithLangChain文件夹下，在使用python mainWithReranker.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数                                                    
-utils/llms.py中关于大模型配置参数的调整，以及utils.config.py脚本中的服务IP、PORT、LLM_TYP、RERANK_MODELE等设置           
-运行python mainWithReranker.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数：                                  
-### （4）运行apiTest脚本进行接口调用测试              
-进入01_RagDemoWithLangChain文件夹下，在使用python apiTest.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数，运行成功后，可以查看smith的跟踪情况                  
-是否要流式输出可设置stream_flag = False或True，检查URL地址中的IP和PORT是否和main脚本中相同                 
-### （5）运行webUI脚本进行测试             
-进入01_RagDemoWithLangChain文件夹下，在使用python webUI.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数，运行成功后，可以查看smith的跟踪情况                  
-是否要流式输出可设置stream_flag = False或True，检查URL地址中的IP和PORT是否和main脚本中相同            
-**注意事项:**              
-在测试使用调用oneapi(阿里通义千问)、阿里通义千问原生接口时，会报错如下所示：                 
-openai.BadRequestError: Error code: 400 - {'error': {'message': 'input should not be none.: payload.input.contents (request id: 2024082015351785023974771558878)', 'type': 'upstream_error', 'param': '400', 'code': 'bad_response_status_code'}}              
-经过分析后，langchain_openai/embeddings包中的base.py源码中默认如下代码的true改为false                 
-check_embedding_ctx_length: bool = False                    
-源码完整路径如下所示:                   
-/opt/anaconda3/envs/RagLangchainTest/lib/python3.11/site-packages/langchain_openai/embeddings/base.py           
-修改后重新启动main服务，进行重新测试               
+支持普通问答和深度推理                           
 
 
