@@ -108,4 +108,35 @@ embedding_model = "text-embedding-v1"
 (6)推理问答          
 支持普通问答和深度推理                           
 
+## 4.3 开发者模式测试             
+### (1) 安装依赖
+下载KAG源码 https://github.com/OpenSPG/KAG 解压后将源码工程拷贝到项目根目录，截止2025-04-22,最新版本是v0.7.0                          
+新建命令行终端，按照如下指令进行依赖安装               
+cd KAG                          
+pip install -e .                    
+安装完成之后可以运行如下指令验证是否安装成功                               
+knext --version                        
+### (2)调整配置文件                                                          
+将根目录下的config目录下的example_config.yaml文件拷贝一份到根目录,根据自己的业务修改配置参数             
+KAG支持txt、pdf、markdown、docx、json、csv、语雀等，根据自己要处理的文本类型进行相关设置                 
+### (3)使用配置文件初始化项目                                   
+新建命令行终端，运行如下命令进行项目创建和初始化                                     
+knext project create --config_path ./example_config.yaml             
+若项目创建完成，修改了配置文件，需要运行如下命令进行更新                  
+knext project update --proj_path .                  
+### (3)提交schema
+项目初始化完成后，进入到对应的项目文件夹下，根据实际业务需求调整schema，调整完成后再执行提交schema                
+knext schema commit                     
+### (4)构建索引                                   
+首先将文档拷贝到新建项目文件夹中的builder/data下，支持txt、pdf、markdown、docx、json、csv等                          
+并可以根据自身业务需求，在builder/prompt目录下新增:ner.py、std.py、triple.py                 
+**注意:** 代码中是通过注解的方式配置到配置文件中                      
+打开命令行终端，进入脚本所在目录cd builder，运行 python indexer.py 命令                   
+构建脚本启动后，会在当前工作目录下生成任务的 checkpoint 目录，记录了构建链路的 checkpoint 和统计信息            
+KAG 框架基于 checkpoint 文件提供了断点续跑的功能。如果由于程序出错或其他外部原因（如 LLM 余额不足）导致任务中断，可以重新执行 indexer.py，KAG 会自动加载 checkpoint 文件并复用已有结果                         
+索引构建成功后，可登录到 http://127.0.0.1:8887/或 http://127.0.0.1:7474/browser/ 查看知识图谱                 
+### (5)检索                              
+打开命令行终端，进入脚本所在目录solver，运行 python query.py 命令                              
+根据自身业务需求，可设置相关prompt内容:如resp_generator.py                          
+也可以在产品端进行测试 http://127.0.0.1:8887/                
 
