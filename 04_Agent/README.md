@@ -3,5 +3,5 @@ https://github.com/NanGePlus/LangGraphChatBot
 https://gitee.com/NanGePlus/LangGraphChatBot                 
 
 从零到一！打造多Agent协作AI全栈应用：前端服务构建及接口，crewAI、Flask与Vue.js的完美结合                     
-https://github.com/NanGePlus/CrewAIFullstackTest         
-https://gitee.com/NanGePlus/CrewAIFullstackTest               
+https://github.com/NanGePlus/CrewAIFlowsFullStack            
+https://gitee.com/NanGePlus/CrewAIFlowsFullStack               
