@@ -2,6 +2,6 @@ LangGraph相关项目地址如下,大家参考这个项目进行学习
 https://github.com/NanGePlus/LangGraphChatBot              
 https://gitee.com/NanGePlus/LangGraphChatBot                 
 
-从零到一！打造多Agent协作AI全栈应用：前端服务构建及接口，crewAI、Flask与Vue.js的完美结合                     
+FastAPI+CrewAI+MySQL+Celery实现AI Agent复杂工作流，支持工作流的并发异步调度和全生命周期状态监测                                
 https://github.com/NanGePlus/CrewAIFlowsFullStack            
 https://gitee.com/NanGePlus/CrewAIFlowsFullStack               
