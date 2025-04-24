@@ -48,9 +48,14 @@ https://www.bilibili.com/video/BV1ba51zFEpe/
 对应文件夹:03_KAG/01_WebAppTest                         
 
 【大模型应用开发-入门系列】10 KAG知识增强生成 最新V0.7版本 开发者模式下应用开发案例全流程实操        
-https://youtu.be/iFPMZmSlzKE           
-https://www.bilibili.com/video/BV1uP59znEhj/          
-对应文件夹:03_KAG/02_KagV7Test
+https://youtu.be/iFPMZmSlzKE            
+https://www.bilibili.com/video/BV1uP59znEhj/           
+对应文件夹:03_KAG/02_KagV7Test                
+
+【大模型应用开发-入门系列】11  Agent智能体 意图识别和分诊智能体应用案例全流程实操 LangGraph框架 FastAPI框架 CrewAI框架              
+https://youtu.be/w44YGeDfHiw          
+https://www.bilibili.com/video/BV1hNL8zxEqb/            
+
 
 大纲_V1.0内容                                   
 <img src="./other/02.png" alt="这是一张图片" width="900" />              
