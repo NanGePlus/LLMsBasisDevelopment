@@ -57,6 +57,10 @@ https://youtu.be/w44YGeDfHiw
 https://www.bilibili.com/video/BV1hNL8zxEqb/                  
 对应文件夹:04_Agent                      
 
+【大模型应用开发-入门系列】12 Fine-Tuning大模型微调，两小时+超长硬核干货，闭环的垂直应用案例、项目源码剖析、详实的图文手册、全流程实操演示           
+https://youtu.be/A6Jl5zZbmGg                
+对应文件夹:05_FineTuning                      
+
 大纲_V1.0内容                                   
 <img src="./other/02.png" alt="这是一张图片" width="900" />              
 
